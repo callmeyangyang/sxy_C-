@@ -179,6 +179,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\static.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\support.cpp"
 				>
 			</File>

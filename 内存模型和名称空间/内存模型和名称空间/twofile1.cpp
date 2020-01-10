@@ -7,7 +7,7 @@ static int harry = 300;
 
 void remote_access();
 
-int main()
+int twofile1()
 {
     using namespace std;
     cout << "main() reports the following address: \n";
