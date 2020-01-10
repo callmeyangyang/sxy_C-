@@ -20,7 +20,7 @@ void local()
     cout << "But global warming = " << ::warming << " degress.\n";
 }
 
-int main()
+int support()
 {
     cout << "Global warming is " << warming << " degress.\n";
 

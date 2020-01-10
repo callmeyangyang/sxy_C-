@@ -6,7 +6,7 @@ double warming = 0.3;
 void update(double dt);
 void local();
 
-int main1()
+int external()
 {
     cout << "Global warming is " << warming << " degress.\n";
 
