@@ -18,7 +18,7 @@ void strcount(const char * str)
     cout << total << " characters\n";
 }
 
-int static()
+int static_cpp()
 {
     char input[ArSize];
     char next;
