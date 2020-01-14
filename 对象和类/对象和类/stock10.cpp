@@ -3,7 +3,6 @@
 
 Stock::Stock()
 {
-    std::cout << "Default constructor called\n";
     company = "no name";
     shares = 0;
     share_val = 0.0;
@@ -12,7 +11,6 @@ Stock::Stock()
 
 Stock::Stock(const std::string & co, long n, double pr)
 {
-    std::cout << "Constructor Using " << co << " called\n";
     company = co;
     if(n < 0)
     {
