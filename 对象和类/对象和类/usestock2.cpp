@@ -1,7 +1,7 @@
 #include<iostream>
 #include "stock10.h"
 
-int main()
+int usestock2()
 {
 #if 0
     using std::cout;
