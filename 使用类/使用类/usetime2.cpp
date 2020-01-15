@@ -1,8 +1,9 @@
 #include<iostream>
-#include "mytime1.h"
+#include "mytime2.h"
 
 int main()
 {
+#if 0
     Time planning;
     Time coding(2, 40);
     Time fixing(5, 55);
@@ -29,6 +30,37 @@ int main()
     total = coding + fixing;
     std::cout << "coding time = ";
     total.Show();
+    std::cout << std::endl;
+
+#endif
+
+    Time weeding(4, 35);
+    Time waxing(2, 47);
+    Time total;
+    Time diff;
+    Time adjusted;
+
+    std::cout << "weeding time = ";
+    weeding.Show();
+    std::cout << std::endl;
+
+    std::cout << "waxing time = ";
+    waxing.Show();
+    std::cout << std::endl;
+
+    std::cout << "total work time = ";
+    total = weeding + waxing;
+    total.Show();
+    std::cout << std::endl;
+
+    diff = weeding - waxing;
+    std::cout << "weeding time - waxing time = ";
+    diff.Show();
+    std::cout << std::endl;
+
+    adjusted = total * 1.5;
+    std::cout << "adjusted work time= ";
+    adjusted.Show();
     std::cout << std::endl;
 
     system("pause");

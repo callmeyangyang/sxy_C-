@@ -1,5 +1,5 @@
-#ifndef MYTIME1_H_
-#define MYTIME1_H_
+#ifndef MYTIME2_H_
+#define MYTIME2_H_
 
 class Time
 {
@@ -15,9 +15,11 @@ public:
     void AddMin(int m);
     void AddHr(int h);
     void Reset(int h = 0, int m = 0);
+    void Show() const;
     // Time Sum(const Time & t) const;
     Time operator+(const Time & t) const;
-    void Show() const;
+    Time operator-(const Time & t) const;
+    Time operator*(double n) const;
 };
 
 #endif
