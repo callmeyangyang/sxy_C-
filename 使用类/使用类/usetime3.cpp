@@ -1,5 +1,5 @@
 #include<iostream>
-#include "mytime2.h"
+#include "mytime3.h"
 
 int main()
 {
@@ -34,6 +34,7 @@ int main()
 
 #endif
 
+#if 0
     Time weeding(4, 35);
     Time waxing(2, 47);
     Time total;
@@ -62,6 +63,22 @@ int main()
     std::cout << "adjusted work time= ";
     adjusted.Show();
     std::cout << std::endl;
+
+#endif
+
+    Time aida(3, 35);
+    Time tosca(2, 48);
+    Time temp;
+
+    std::cout << "Aida and Tosca:\n";
+    std::cout << aida << "; " << tosca << std::endl;
+
+    temp = aida + tosca;
+    std::cout << "Aida + Tosca: " << temp << std::endl;
+
+    temp = aida * 1.17;
+    std::cout << "Aida * 1.17: " << temp << std::endl;
+    std::cout << "10.0 * Tosca: " << 10.0 * tosca << std::endl;
 
     system("pause");
     return 0;

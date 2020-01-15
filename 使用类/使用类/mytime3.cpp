@@ -1,5 +1,5 @@
 #include<iostream>
-#include "mytime2.h"
+#include "mytime3.h"
 
 Time::Time()
 {
@@ -68,7 +68,22 @@ Time Time::operator*(double mult) const
     return result;
 }
 
-void Time::Show() const
+//void Time::Show() const
+//{
+//    std::cout << hours << " hours, " << minutes << " minutes";
+//}
+
+//Time operator*(double mult, const Time & t)
+//{
+//    Time result;
+//    long totalminutes = t.hours * mult * 60 + t.minutes * mult;
+//    result.hours = totalminutes / 60;
+//    result.minutes = totalminutes % 60;
+//    return result;
+//}
+
+std::ostream & operator<<(std::ostream & os, const Time & t)
 {
-    std::cout << hours << " hours, " << minutes << " minutes";
+    os << t.hours << " hours, " << t.minutes << " minutes";
+    return os;
 }

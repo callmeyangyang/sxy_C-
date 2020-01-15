@@ -175,11 +175,11 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\mytime2.cpp"
+				RelativePath=".\mytime3.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\usetime2.cpp"
+				RelativePath=".\usetime3.cpp"
 				>
 			</File>
 		</Filter>
@@ -189,7 +189,7 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\mytime2.h"
+				RelativePath=".\mytime3.h"
 				>
 			</File>
 		</Filter>
