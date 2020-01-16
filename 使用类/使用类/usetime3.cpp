@@ -1,7 +1,7 @@
 #include<iostream>
 #include "mytime3.h"
 
-int main()
+int main123()
 {
 #if 0
     Time planning;
