@@ -34,3 +34,13 @@ void Stonewt::show_stn() const
 {
     std::cout << stone << " stone, " << pds_left << " pounds.\n";
 }
+
+Stonewt::operator int() const
+{
+    return int (pounds + 0.5);
+}
+
+Stonewt::operator double() const
+{
+    return pounds;
+}

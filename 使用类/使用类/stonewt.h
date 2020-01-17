@@ -18,6 +18,9 @@ public:
 public:
     void show_lbs() const;
     void show_stn() const;
+public:
+    operator int() const;
+    operator double() const;
 
 };
 

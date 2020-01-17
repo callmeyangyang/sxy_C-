@@ -5,6 +5,7 @@ void display(const Stonewt & st, int n);
 
 int main()
 {
+#if 0
     Stonewt incognito = 275;
     Stonewt wolfe(285.7);
     Stonewt taft(21, 8);
@@ -29,6 +30,15 @@ int main()
     display(422, 2);
 
     std::cout << "No stone left unearned.\n";
+#endif
+
+    Stonewt poppings(9, 2.8);
+    double p_wt = poppings;
+
+    std::cout << "Convert to double => ";
+    std::cout << "Poppings: " << p_wt << " pounds.\n";
+    std::cout << "Convert to int => ";
+    std::cout << "Poppings: " << int (poppings) << " pounds.\n";
     
     system("pause");
     return 0;
