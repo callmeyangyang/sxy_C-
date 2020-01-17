@@ -179,6 +179,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\stone.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\stonewt.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\usetime3.cpp"
 				>
 			</File>
@@ -190,6 +198,10 @@
 			>
 			<File
 				RelativePath=".\mytime3.h"
+				>
+			</File>
+			<File
+				RelativePath=".\stonewt.h"
 				>
 			</File>
 		</Filter>
