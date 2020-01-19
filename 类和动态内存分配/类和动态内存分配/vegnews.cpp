@@ -1,51 +1,71 @@
 #include<iostream>
-#include "strngbad.h"
+#include "string1.h"
 
-void callme1(StringBad &);
-void callme2(StringBad);
+const int ArSize = 10;
+const int MaxLen = 81;
 
 int main()
 {
+    String name;
+    std::cout << "Hi, What's your name?\n>> ";
+    std::cin >> name;
+
+    std::cout << name << ", please enter up to " << ArSize
+        << " short sayings <empty line to quit>:\n";
+
+    String sayings[ArSize];
+    char temp[MaxLen];
+    int i;
+    for(i = 0; i < ArSize; i++)
     {
-        std::cout << "Starting an inner block.\n";
-        StringBad headline1("Celery Stalks at Midnight");
-        StringBad headline2("Lettuce Prey");
-        StringBad sports("Spinach Leaves Bowl for Dollars");
-
-        std::cout << "headline1: " << headline1 << std::endl;
-        std::cout << "headline2: " << headline2 << std::endl;
-        std::cout << "sports: " << sports << std::endl;
-        
-        callme1(headline1);
-        std::cout << "headline1: " << headline1 << std::endl;
-
-        callme2(headline2);
-        std::cout << "headline2: " << headline2 << std::endl;
-
-        std::cout << "Initialze one object to another:\n";
-        StringBad sailor = sports;
-        std::cout << "sailor: " << sailor << std::endl;
-
-        std::cout << "Assign one object to another:\n";
-        StringBad knot;
-        knot = headline1;
-        std::cout << "knot: " << knot << std::endl;
-        std::cout << "Exiting the block.\n";
+        std::cout << i + 1 << ": ";
+        std::cin.get(temp, MaxLen);
+        while(std::cin && std::cin.get() != '\n')
+        {
+            continue;
+        }
+        if(!std::cin || temp[0] == '\0')
+        {
+            break;
+        }
+        else
+        {
+            sayings[i] = temp;
+        }
     }
-    
-    std::cout << "End of main().\n";
+    int total = i;
+
+    if(total > 0)
+    {
+        std::cout << "Here are your sayings:\n";
+        for(i = 0; i < total; i++)
+        {
+            std::cout << sayings[i][0] << ": " << sayings[i] << std::endl;
+        }
+
+        int shortest = 0;
+        int first = 0;
+        for(i = 1; i < total; i++)
+        {
+            if(sayings[i].length() < sayings[shortest].length())
+            {
+                shortest = i;
+            }
+            if(sayings[i] < sayings[first])
+            {
+                first = i;
+            }
+        }
+
+        std::cout << "Shortest saying:\n" << sayings[shortest] << std::endl;
+        std::cout << "First alphabetically:\n" << sayings[first] << std::endl;
+        std::cout << "This program used " << String::HowMany() << " String objects. Bye.\n";
+    }
+    else
+    {
+        std::cout << "No input! Bye.\n";
+    }
+
     system("pause");
     return 0;
-}
-
-void callme1(StringBad & rsb)
-{
-    std::cout << "String passed by reference:\n";
-    std::cout << "      \"" << rsb <<"\"\n";
-}
-
-void callme2(StringBad sb)
-{
-    std::cout << "String passed by value:\n";
-    std::cout << "      \"" << sb <<"\"\n";
 }
