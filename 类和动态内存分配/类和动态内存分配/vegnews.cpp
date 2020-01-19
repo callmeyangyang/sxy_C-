@@ -4,7 +4,7 @@
 const int ArSize = 10;
 const int MaxLen = 81;
 
-int main()
+int vegnews()
 {
     String name;
     std::cout << "Hi, What's your name?\n>> ";
