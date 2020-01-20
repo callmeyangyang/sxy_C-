@@ -30,7 +30,7 @@ public:
     }
 };
 
-int main()
+int placenew1()
 {
     char * buffer = new char[BUF];
     JustTesting *pc1, *pc2;
